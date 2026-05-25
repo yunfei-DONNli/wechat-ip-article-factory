@@ -22,7 +22,7 @@ input / source material
 → collaborative expansion or direct publish mode
 → candidate draft
 → publish version
-→ title lock
+→ title candidates → title lock
 → visual assets
 → WeChat layout / HTML
 → publish package
@@ -111,6 +111,8 @@ Before candidate drafting, publish-version locking, or draft-box creation, check
 - story material library
 - expression boundaries and forbidden claims
 
+If this is a judgment-heavy article and a real story anchor exists, default to landing at least one story anchor unless the user explicitly asks not to or the anchor would distort the core judgment.
+
 If writing assets are missing, say what is missing and draft conservatively. Do not fabricate expertise.
 
 ### B. Concept Coverage Gate
@@ -125,7 +127,8 @@ Before publish version lock, package readiness, or draft-box creation:
 
 - load `references/title-generation.md`
 - judge the current title as `keep`, `tweak`, or `rewrite`
-- generate 3-5 title candidates when needed
+- generate 3-5 title candidates before locking the title; do not jump straight to one polished title
+- even if the user already supplied a title, still re-evaluate and regenerate candidates when the title is only a work title or no longer fits the article
 - mark exactly one recommended title
 - keep the title faithful to the article's core judgment
 - sync the selected title to draft, publish version, HTML, package, and draft-box title
@@ -152,10 +155,15 @@ Each source visual must end in one of these outcomes:
 
 A cover is not enough. Explicitly check whether the article needs in-body images.
 
+Cover is single-select: lock exactly one final cover asset.
+Body images are multi-select: if the article benefits from multiple in-body visuals, land more than one rather than forcing a single image.
+
 Before package readiness, this gate must end in exactly one outcome:
 
 - body images are landed and referenced by the final article / HTML
 - or the package records `skip=true` with a concrete reason
+
+If body-image generation is needed, actual image assets must be produced. Prompt files alone are not a completed body-image outcome.
 
 ### G. Fact and Claim Check Gate
 
@@ -250,8 +258,10 @@ When working in direct publish mode, make clear:
 
 - source of truth
 - publish title status
+- title candidate coverage and final selection
 - missing items before package readiness
 - body-image decision
+- whether body images are single-select or multi-select
 - WeChat compatibility status
 - whether draft-box API is available
 - closeout status

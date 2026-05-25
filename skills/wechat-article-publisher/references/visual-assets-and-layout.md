@@ -13,7 +13,8 @@
 配图区/YYYY-MM-DD_主题/
 ├── image-prompts.md
 ├── cover.png
-└── illustration-01.png
+├── illustration-01.png
+└── illustration-02.png
 ```
 
 建议发布包目录：
@@ -39,6 +40,8 @@
 
 封面完成不等于视觉闭环完成。
 
+封面是单选资产；正文图可以多选，不要把多图需求硬压成一张图。
+
 长文默认检查是否需要：
 
 - 新闻截图
@@ -51,6 +54,8 @@
 
 - 正文图已经真实落地，并被最终 HTML 引用
 - 或在 `article.json.visual_assets` 中明确写 `skip: true` 和 `reason`
+
+如果正文需要多张图，应一次性产出并保留多个候选，再按文章结构落位；不要先假设只能做单张图。
 
 如果用户要求正文配图，不能只生成 `image-prompts.md`，必须有实际图片落地。
 

@@ -11,8 +11,9 @@
 - 发布版 Markdown 已更新
 - HTML 粘贴版已更新
 - 发布包已更新
-- cover.png 来自配图区正式版本或已有明确封面建议
+- cover.png 来自配图区正式版本或已有明确封面建议，且封面只锁定 1 张
 - 正文配图已完成二选一：`发布包/images/` 已有实际资源，或 `article.json.visual_assets.skip=true + reason`
+- 如果文章需要多张正文图，`发布包/images/` 和 HTML 已引用全部选中图片
 - `article.json` 已记录 visual_assets
 - 固定链接或延伸阅读链接完整
 
@@ -25,7 +26,7 @@
 - publish version 存在
 - HTML 存在
 - cover 或 cover decision 存在
-- body-image decision 完成
+- body-image decision 完成，且已明确正文图是多选落位还是跳过
 - source closeout target 明确
 - draft-box API 依赖已判断
 
