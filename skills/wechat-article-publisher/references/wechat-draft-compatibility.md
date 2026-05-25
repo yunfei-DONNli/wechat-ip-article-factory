@@ -1,39 +1,90 @@
-# WeChat Draft Compatibility
+# 微信草稿兼容性
 
-## Purpose
+本文件专门防止“本地生成正常，但微信草稿或后台粘贴失败”。
 
-Make the final article package safe for WeChat Official Account editing and draft-box creation.
+## 完成标准
 
-## Checkpoints
+根据用户能力分两种完成标准：
 
-- Title is locked and synced.
-- HTML uses WeChat-safe structure.
-- Images have stable local/package references before upload.
-- Body images are either landed or explicitly skipped with reason.
-- Links and anchors are valid.
-- Unsupported layout styles are avoided.
-- Draft-box API availability is confirmed before remote creation.
+### 有公众号 API 权限
 
-## API Dependency
+只有满足以下条件，才可视为草稿箱链路完成：
 
-Draft-box creation requires WeChat Official Account API credentials and sufficient account permission.
+- 远端 draft 创建成功
+- publish notes 已回写最新信息
+- 最新 draft 可在后台继续人工核对
 
-If unavailable, produce a manual publishing package instead:
+本地文件生成、HTML 生成、发布包生成，都不等于草稿箱链路完成。
 
-- final Markdown or HTML
-- title
-- summary
-- cover suggestion or cover asset
-- body-image decision
-- publish notes
-- manual copy/paste checklist
+### 没有公众号 API 权限
 
-## Rebuild Rule
+很多用户没有公众号官方 API 权限。此时不要把流程判定为失败，应交付手动发布包：
 
-If WeChat compatibility fails, rebuild the publish package from the selected publish version. Do not silently patch only the remote draft while leaving the local package inconsistent.
+- 最终 Markdown 或 HTML
+- 标题
+- 摘要
+- 封面图或封面建议
+- 正文配图决策
+- 手动复制粘贴清单
+- 后台人工检查清单
 
-## Completion Boundary
+## 高风险兼容性问题
 
-`draft created` means the article exists in the account draft box.
+重点检查：
 
-`published` means the user confirms publication or provides the public article URL.
+- HTML 中残留 Markdown 语法，如 `**粗体**`
+- 不稳定链接、错误链接、临时链接
+- 相关链接缺 `<a href>`
+- `text-decoration: none` 误用于延伸阅读链接
+- HTML 结构退化成 body-only
+- 模板结构与既有 accepted style 偏差太大
+- 图片路径仍指向本地临时路径
+
+## HTML 硬门槛
+
+建议包含：
+
+- 外层 wrapper
+- 顶部 title card 或标题区
+- `h1`
+- 作者 / 日期行
+- 编号 section-title
+- 紧凑段落
+- 可点击的延伸阅读链接
+
+## 固定链接块
+
+如果文章含固定延伸阅读链接，要满足：
+
+- 真正的 `<a href>`
+- 颜色和下划线可识别
+- 链接可回溯到 publish record 或 source record
+- 不使用空链接或占位链接冒充完成
+
+## 失败排查思路
+
+如果远端创建草稿失败或后台粘贴异常：
+
+1. 先怀疑 HTML 内容兼容性，不先怀疑整体流程
+2. 先查粗体残留、异常链接、锚点结构、图片引用
+3. 必要时做最小化替换 / 分段 bisect
+4. 修复后重新生成发布包，而不是只手工改远端草稿
+
+## 重建规则
+
+如果用户明确要求重建新 draft：
+
+- 先确认是否真的有公众号 API 权限
+- 先保留旧 draft / package 的记录
+- 重新从选定发布版生成 HTML 和发布包
+- 再创建新 draft 或手动发布包
+
+除非 wrapper 或脚本坏了，否则不要绕过主流程手工拼一个远端草稿。
+
+## 完成边界
+
+`draft created` 表示文章存在于公众号草稿箱。
+
+`manual package ready` 表示用户可以人工复制到公众号后台。
+
+`published` 表示用户确认后台已正式发布，或提供了公开文章 URL。

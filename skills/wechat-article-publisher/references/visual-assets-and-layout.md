@@ -1,8 +1,109 @@
-# Visual Assets and Layout
+# 配图与排版规则
 
-## Rules
+这部分解决两个问题：
 
-- Cover is not enough; check in-body images too.
-- If no body image is needed, record `skip=true` and a reason.
-- Preserve user screenshots.
-- Keep HTML compatible with WeChat draft rendering.
+- 文章视觉资产是否完整
+- 微信排版是否稳定、可复制、适合人工检查
+
+## 视觉资产目录
+
+建议视觉源目录：
+
+```text
+配图区/YYYY-MM-DD_主题/
+├── image-prompts.md
+├── cover.png
+└── illustration-01.png
+```
+
+建议发布包目录：
+
+```text
+发布包/YYYY-MM-DD_主题/
+├── article.json
+├── content.html
+├── cover.png
+└── images/
+```
+
+公开版可以按自己的 vault 或项目结构调整目录，但必须区分源资产区和发布包区。
+
+## 资产角色
+
+- `配图区/`：源资产区
+- `发布包/cover.png`：上传或人工发布副本
+- `发布包/images/`：正文实际使用图片
+- HTML：最终引用层
+
+## 正文图规则
+
+封面完成不等于视觉闭环完成。
+
+长文默认检查是否需要：
+
+- 新闻截图
+- 概念图
+- 结构图
+- 引用卡片
+- 过渡图
+
+正文配图不能停留在“还没决定”。发布包进入 ready 前，必须二选一：
+
+- 正文图已经真实落地，并被最终 HTML 引用
+- 或在 `article.json.visual_assets` 中明确写 `skip: true` 和 `reason`
+
+如果用户要求正文配图，不能只生成 `image-prompts.md`，必须有实际图片落地。
+
+如果最后不用正文图，必须记录原因。
+
+## 用户截图保全
+
+用户提供截图时：
+
+- 不能静默丢失
+- 要记录已使用 / 转化参考 / 明确排除
+- 如果被文章使用，必须同步到最终引用链路
+- 如果只是作为证据或线索，也要在素材记录中保留
+
+## 微信版式基线
+
+优先复用已有模板，不现场发明新样式。
+
+如果用户没有模板，默认生成一个简洁、移动端友好、便于复制到公众号后台的 HTML：
+
+- 清晰标题区
+- 作者 / 日期行
+- 分节标题
+- 段落间距紧凑
+- 重点句有限强调
+- 延伸阅读链接可点击
+
+## 关键样式建议
+
+- 外层宽度：约 680px
+- 正文色：`#2F3437`
+- 蓝色强调：`#0F4C81`
+- 点缀色：`#D88A4A`
+- 行高：约 `1.7`
+- 段落间距：紧凑，不要像网页博客一样松散
+- 小节标题：建议可被脚本识别，例如 `data-component="section-title"`
+
+## 强调句规则
+
+使用类似：
+
+```html
+<strong style="font-weight: 800; color: #0F4C81;">重点句</strong>
+```
+
+每篇 3-5 句即可，不要整篇染蓝。
+
+## 发布包一致性
+
+如果重生成 HTML 或图片，必须同步更新：
+
+- `content.html`
+- `article.json`
+- `cover.png`
+- `images/`
+- 手动发布说明或草稿箱上传记录

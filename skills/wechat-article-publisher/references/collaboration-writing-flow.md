@@ -1,39 +1,156 @@
-# Collaboration Writing Flow
+# 协作扩写流程
 
-## Purpose
+用于处理素材、核心段、观点种子、截图线索和半成稿，目标是把“作者已经开始表达的东西”推进为可发布文章，而不是替代作者重写。
 
-Turn rough ideas, notes, screenshots, or half drafts into a coherent WeChat article without losing the author's original judgment.
+## 输入模式判断
 
-## Input Modes
+优先判断输入属于哪一类：
 
-- `idea_seed`: one core thought or judgment
-- `rough_material`: fragments, screenshots, links, notes, evidence
-- `half_draft`: draft exists but structure or voice is incomplete
-- `finished_draft`: full draft exists and needs publishing work
-- `publish_input`: article is ready for title, package, layout, or draft-box work
+- 核心段模式：已有 150 字以上、风格和判断明显的原文
+- 观点种子模式：只有标题、观点句、几个关键词
+- 事件扩写模式：新闻、截图、链接、事件线索
+- 素材成文模式：多段摘录、零散材料、尚无明确论点
+- 成稿发布模式：已经有完整文章，需要标题、配图、排版、发布包或草稿箱处理
 
-## Default Flow
+如果无法判断，先停下来确认输入模式，不直接写全文。
 
-1. Diagnose input mode.
-2. Identify the source of truth.
-3. Check writing assets and author voice.
-4. Extract the core judgment.
-5. Decide whether collaborative expansion is needed.
-6. If direction is not locked, produce 2-3 direction cards.
-7. After direction is selected, write or revise the candidate draft.
-8. Promote to publish version only after title, story, visual, and fact gates are resolved.
+## 固定推进顺序
 
-## Direction Card
+```text
+Phase 0 输入诊断
+→ Phase 1 MECE 分析 + 金字塔逻辑图
+→ Phase 1.5 资料校验与补充
+→ Phase 2 2-3 个方案卡
+→ Phase 3 候选稿
+→ 成稿 / 发布版
+```
 
-Each direction card should include:
+成稿发布模式可以跳过 Phase 2 / Phase 3，但不能跳过标题、视觉资产、兼容性和收尾检查。
 
-- core thesis
-- target reader
-- article angle
-- supporting examples or evidence
-- likely title direction
-- risk or missing input
+## Phase 0 输入诊断
 
-## Preservation Rule
+必须先明确：
 
-When user source material already contains a strong personal judgment, preserve the original judgment instead of rewriting it into generic AI prose.
+- 当前输入模式
+- 当前 source of truth
+- 是否已有作者原文主干
+- 是否需要外部资料校验
+- 是否需要先读取写作资产
+- 是否已具备进入候选稿的条件
+
+不得把素材池、截图线索或网页摘录直接当作成稿。
+
+## Phase 1 必做项
+
+必须明确：
+
+- 当前输入模式
+- 写作依据优先级
+- 文章真正要回答的问题
+- 原素材已经说清楚了什么
+- 缺失的逻辑链、过渡、论据、案例位、数据位、引用位
+- AI 最容易改坏原味的地方
+- 不可改边界
+- 本篇必须调用哪些写作资产
+- 是否需要个人故事锚点
+- 用户点名要求补上的概念有哪些
+
+## 写作依据优先级
+
+默认优先级：
+
+1. 作者原文和明确表达过的判断
+2. 作者写作资产和历史风格基线
+3. 用户本轮补充的要求和边界
+4. 已核验事实和可靠来源
+5. AI 结构化补足内容
+
+AI 只能补结构、过渡和表达链路，不能替作者发明经历、身份、成绩或行业判断。
+
+## Phase 1.5 资料校验
+
+遇到以下情况默认启用：
+
+- 当前事件
+- 公司 / 产品 / 政策 / 价格 / 市场数据
+- 技术机制或产品能力判断
+- 命名人物、报告、案例
+- 用户明确要求带资料校验
+
+资料优先级：
+
+1. 用户提供的原文、笔记、素材和内部资料
+2. 用户明确授权的私有资料库
+3. 官方 / 一手来源
+4. 高质量二手来源
+5. 开放网络与社交讨论，仅作线索
+
+必须把资料校验结论写入 `research-brief.md` 或等价记录，至少区分：
+
+- 作者自己的判断
+- 已核验事实
+- 可用支撑材料
+- 冲突与未解项
+- 仍需保留的占位符
+
+## Phase 2 方案卡
+
+粗输入场景必须先出 2-3 个方向，再等用户选。
+
+默认方案：
+
+- 方案 A：保守增强
+- 方案 B：叙事增强
+- 方案 C：评论强化
+
+每张方案卡至少包含：
+
+- 标题角度
+- 核心论点
+- 目标读者
+- 开头策略
+- 结构大纲
+- 保留什么
+- 新增什么
+- 不改什么
+- 需要的写作资产
+- 需要的事实校验
+- 风险与代价
+- 推荐理由
+
+如果用户明确说“全自动按推荐走”，默认选择风险最低且最贴近原文判断的方案。
+
+## Phase 3 候选稿
+
+只有在用户已选方向，或明确说“全自动按推荐走”时才进入。
+
+候选稿要求：
+
+- 不混入 MECE、金字塔、方案卡分析
+- 核心段模式下保留原文主干
+- 非核心段模式下明确哪些内容来自事件、历史风格、占位补充
+- 不把未经核验的信息写成确定事实
+- 不发明作者个人故事
+- 升级到发布版前，先做 coverage check
+
+## Coverage Check
+
+候选稿进入成稿 / 发布版前，至少检查：
+
+- 用户点名要求补上的概念是否已出现
+- 写作资产是否真的被使用
+- 个人故事锚点是否已评估
+- 资料校验结论是否已反映到正文
+- 截图、链接、事件线索是否有处理结果
+- 标题是否仍是工作标题
+
+## 必停场景
+
+以下情况必须停：
+
+- 输入模式不明
+- 核心论点不明
+- 用户说“改得不像我”“太 AI”
+- 用户还没选方案，且未授权全自动推荐
+- 关键事实无法核验且会影响主论点
+- 缺少写作资产会导致文章伪装专业经验
