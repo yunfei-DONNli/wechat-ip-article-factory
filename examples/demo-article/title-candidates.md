@@ -1,5 +1,24 @@
 # Title candidates
 
-- Recommended: A creator does not need more content, but a repeatable content system
-- Alternative: The real problem is not writing, but closing the publishing loop
-- Alternative: From scattered notes to a publish-ready article
+## 参考来源
+
+- 本文核心判断：创作者缺的不是更多内容，而是可复用的内容系统
+- demo 风格边界：不标题党、不伪装真实增长案例
+
+## 处理判断
+
+重写。原始判断适合作为正文主线，但标题需要更适合公众号首屏。
+
+## 推荐标题
+
+一个创作者真正缺的，不是更多选题，而是一套内容系统
+
+## 备选标题
+
+- 真正卡住创作者的，不是写作能力，而是发布闭环
+- 从零散想法到公众号文章，中间缺的是一条生产线
+- 别急着找选题，先搭一套能复用的内容工厂
+
+## 推荐理由
+
+推荐标题保留了核心判断，也有清晰对比关系，适合作为公众号文章标题。

@@ -1,7 +1,29 @@
 {
-  "title": "A creator does not need more content, but a repeatable content system",
+  "package_id": "demo-article",
+  "status": "manual_package_ready",
+  "title": "一个创作者真正缺的，不是更多选题，而是一套内容系统",
+  "source": {
+    "input_mode": "观点种子",
+    "source_file": "source.md"
+  },
+  "title_decision": {
+    "status": "rewrite",
+    "recommended": "一个创作者真正缺的，不是更多选题，而是一套内容系统",
+    "candidates_file": "title-candidates.md"
+  },
   "visual_assets": {
-    "skip": true,
-    "reason": "demo only"
-  }
+    "cover": {
+      "status": "suggested_only",
+      "reason": "demo does not include generated image assets"
+    },
+    "body_images": {
+      "skip": true,
+      "reason": "short demo article; no body image required"
+    }
+  },
+  "draft_box": {
+    "api_available": false,
+    "fallback": "manual publishing package"
+  },
+  "completion_boundary": "manual_package_ready is not published"
 }

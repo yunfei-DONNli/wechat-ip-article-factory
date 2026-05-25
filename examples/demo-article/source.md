@@ -1,3 +1,18 @@
 # Demo source
 
-A fictional creator wants to turn scattered notes into a structured WeChat article.
+## 原始想法
+
+很多创作者真正缺的不是更多选题，而是一套能反复使用的内容生产系统。
+
+## 输入诊断
+
+- 输入模式：观点种子
+- source of truth：上面这句话判断
+- 需要写作资产：作者定位、表达边界、故事素材库
+- 需要事实校验：不需要外部事实校验，这是经验型判断
+
+## 不可改边界
+
+- 不把它写成“AI 自动写爆款”的承诺
+- 不伪装成真实案例
+- 不声称已经帮助某账号增长
