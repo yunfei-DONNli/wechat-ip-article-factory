@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Publisher"
+  short_description: "Turn ideas and source material into a publish-ready WeChat Official Account article with titles, assets, layout, images, and closeout."
+  default_prompt: "Process this article through the WeChat Article Publisher workflow: check source of truth, generate or refine titles, use writing assets, preserve story anchors, verify images and layout, create the publish package, and close out the draft box."

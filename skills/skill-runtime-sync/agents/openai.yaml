@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Runtime Sync"
+  short_description: "Sync and verify custom skills across Codex, Claude Code, and agents runtime folders."
+  default_prompt: "Check whether a custom skill source folder matches its Codex, Claude Code, and agents runtime copies; if not, sync and verify the diff."
