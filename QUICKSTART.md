@@ -6,6 +6,8 @@
 bash scripts/install-skills.sh
 ```
 
+这个安装脚本是增量安装，不会清空你现有的其他 skill。
+
 ## 2. 初始化内容工厂
 
 复制 `templates/content-factory/` 到你的 Obsidian vault，或者按你的本地目录结构使用同等目录。

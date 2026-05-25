@@ -48,6 +48,8 @@ AI 的作用是放大表达效率，不是替代经验本身。
 bash scripts/install-skills.sh
 ```
 
+这个脚本只会安装本仓库提供的 skill，不会删除你本机 `~/.codex/skills`、`~/.agents/skills` 或 `~/.claude/skills` 里已有的其他 skill。
+
 然后把 `templates/content-factory/` 复制到你的 Obsidian vault，填写写作资产模板，从 demo 开始跑第一篇文章。
 
 ## 推荐工作流

@@ -23,5 +23,5 @@ Source folder is the source of truth. Runtime folders are copies only.
 
 1. Identify the skill.
 2. Compare source and runtime copies.
-3. Sync with delete semantics.
-4. Verify no diff remains.
+3. Sync only the skills this repo provides; do not delete unrelated runtime skills.
+4. Verify the target skill copies match the source.
