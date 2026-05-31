@@ -63,6 +63,14 @@ python3 -X utf8 scripts/check-public-profile.py
 
 它只检查公开模板完整性、JSON 有效性和明显隐私泄露，不依赖公众号 API。
 
+从零用户视角冒烟测试：
+
+```bash
+python3 -X utf8 scripts/smoke-new-user.py
+```
+
+它会使用临时 HOME 和临时 vault 验证安装、模板复制和 demo 工作区准备，不会改你的真实 Obsidian vault。
+
 ## 推荐工作流
 
 1. 先写下你的原始想法、行业判断、案例和素材
