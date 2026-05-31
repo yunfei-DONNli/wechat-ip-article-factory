@@ -1,0 +1,17 @@
+{
+  "name": "wechat-ip-article-factory",
+  "version": "0.2.0",
+  "status": "public",
+  "release_date": "2026-05-31",
+  "description": "Public WeChat IP article factory with skills, content factory templates, public-generic profile templates, demo article, install script, and new-user smoke tests.",
+  "skills": [
+    "skills/wechat-article-publisher",
+    "skills/skill-runtime-sync"
+  ],
+  "checks": [
+    "python3 -X utf8 scripts/check-public-profile.py",
+    "python3 -X utf8 scripts/smoke-new-user.py"
+  ],
+  "api_required": false,
+  "private_assets_included": false
+}
