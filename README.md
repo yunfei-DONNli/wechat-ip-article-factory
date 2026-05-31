@@ -38,6 +38,7 @@ AI 的作用是放大表达效率，不是替代经验本身。
 - 运行时同步 skill
 - 内容工厂模板
 - 写作资产模板
+- 完整 public-generic Profile 模板（作者身份、风格、故事、链接、research brief、article.json）
 - demo 示例
 - 安装脚本
 - 公开版 reference 规则
@@ -50,7 +51,17 @@ bash scripts/install-skills.sh
 
 这个脚本只会安装本仓库提供的 skill，不会删除你本机 `~/.codex/skills`、`~/.agents/skills` 或 `~/.claude/skills` 里已有的其他 skill。
 
-然后把 `templates/content-factory/` 复制到你的 Obsidian vault，填写写作资产模板，从 demo 开始跑第一篇文章。
+然后把 `templates/content-factory/` 复制到你的 Obsidian vault。轻量使用时填写 `templates/writing-assets/`；完整使用时复制 `skills/wechat-article-publisher/profiles/public-generic/` 到你的私有工作区并补齐作者身份、风格、故事、链接和发布元数据。
+
+## 模板检查
+
+公开 Profile 模板可用以下命令检查：
+
+```bash
+python3 -X utf8 scripts/check-public-profile.py
+```
+
+它只检查公开模板完整性、JSON 有效性和明显隐私泄露，不依赖公众号 API。
 
 ## 推荐工作流
 

@@ -97,6 +97,19 @@ Minimum useful inputs:
 
 If some inputs are missing, continue with explicit assumptions only when safe. Do not invent professional experience, facts, or personal stories.
 
+
+## Public Profile Templates
+
+This public package includes a fillable generic profile under:
+
+```text
+skills/wechat-article-publisher/profiles/public-generic/
+```
+
+Use `profiles/public-generic/EXTEND.md` when adapting the workflow for a new author. It contains templates and synthetic examples only. Users should copy these templates into their own private workspace and fill them with their real identity, style, story, link, and publishing metadata.
+
+Do not treat missing public-template fields as permission to skip gates. Missing profile data means the user must fill the template or the agent must draft conservatively without inventing expertise, facts, or personal stories.
+
 ## Mandatory Gates
 
 These gates are hard requirements before claiming package readiness.

@@ -1,0 +1,39 @@
+{
+  "package_id": "YYYY-MM-DD_topic",
+  "title": "Fake sample title",
+  "author": "Author Name",
+  "summary": "One-sentence public summary.",
+  "source_of_truth": "publish-version.md",
+  "visual_assets": {
+    "cover": {
+      "path": "cover.png",
+      "source": "generated_or_user_provided"
+    },
+    "body_images": [
+      {
+        "path": "images/fake-screenshot.png",
+        "source": "source-material",
+        "position": "after opening",
+        "purpose": "evidence"
+      }
+    ],
+    "skip": false,
+    "reason": ""
+  },
+  "truth_check": {
+    "triggered": true,
+    "reason": "Article contains factual claims.",
+    "research_brief": "research-brief.md",
+    "publish_preflight_review": true,
+    "unverified_claims": [],
+    "downgraded_claims": [],
+    "central_blockers": []
+  },
+  "title_candidates": [
+    {
+      "title": "Fake sample title",
+      "recommended": true,
+      "reason": "Clear promise and concrete reader benefit."
+    }
+  ]
+}

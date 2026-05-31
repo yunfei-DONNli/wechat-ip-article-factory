@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Fake sample article",
+    "url": "https://example.com/wechat/fake-example",
+    "published_at": "2026-01-01 09:00",
+    "digest": "A fake sample used to show the schema.",
+    "cover_url": "https://example.com/fake-cover.jpg",
+    "tags": [
+      "AI workflow"
+    ],
+    "source": "manual"
+  }
+]

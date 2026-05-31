@@ -14,14 +14,24 @@ bash scripts/install-skills.sh
 
 ## 3. 准备写作资产
 
-填写 `templates/writing-assets/` 里的模板，至少准备：
+轻量方式：填写 `templates/writing-assets/` 里的模板，至少准备：
 
 - 作者风格基线
 - 作者身份基线
 - 故事素材库
 - 表达边界规则
 
-## 4. 放入第一份输入
+完整方式：复制 `skills/wechat-article-publisher/profiles/public-generic/` 到你的私有工作区，再按 `EXTEND.md` 填写作者身份、风格、故事、已发布链接、固定引用链接、research brief 和 `article.json` 模板。
+
+## 4. 检查公开 Profile 模板
+
+```bash
+python3 -X utf8 scripts/check-public-profile.py
+```
+
+这个检查只验证公开模板完整性、JSON 有效性和明显隐私泄露，不需要公众号 API。
+
+## 5. 放入第一份输入
 
 把你的输入放进素材区：
 
@@ -31,7 +41,7 @@ bash scripts/install-skills.sh
 - 截图 / 链接 / 事件线索
 - 现成文章草稿
 
-## 5. 先做输入诊断
+## 6. 先做输入诊断
 
 先判断这份输入属于哪类：
 
@@ -43,12 +53,12 @@ bash scripts/install-skills.sh
 
 不要一上来就直接写终稿。
 
-## 6. 选择工作模式
+## 7. 选择工作模式
 
 - 粗输入：先协作扩写，再进入候选稿
 - 现成成稿：直接进入标题、配图、发布包和收尾检查
 
-## 7. 生成发布资产
+## 8. 生成发布资产
 
 按需要输出：
 
@@ -59,18 +69,18 @@ bash scripts/install-skills.sh
 - `article.json`
 - 手动发布清单或草稿箱准备材料
 
-## 8. 处理草稿箱或手动发布
+## 9. 处理草稿箱或手动发布
 
 - 有公众号 API 权限：创建草稿箱草稿
 - 没有公众号 API 权限：输出完整手动发布包
 
-## 9. 做收尾
+## 10. 做收尾
 
 - 回写 publish 状态
 - 回写 source note / inbox 记录（如果有）
 - 人工确认后再算正式发布
 
-## 10. 不要混淆状态
+## 11. 不要混淆状态
 
 - `已创建草稿` 不等于 `已正式发布`
 - `手动发布包 ready` 不等于 `已发布`
