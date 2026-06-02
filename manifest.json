@@ -1,9 +1,9 @@
 {
   "name": "wechat-ip-article-factory",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "public",
-  "release_date": "2026-05-31",
-  "description": "Public WeChat IP article factory with skills, content factory templates, public-generic profile templates, demo article, install script, and new-user smoke tests.",
+  "release_date": "2026-06-02",
+  "description": "Public WeChat IP article factory with skills, templates, public-generic profile assets, demo article, onboarding checks, reliability gates, visual/title/fact-check references, and evaluation cases.",
   "skills": [
     "skills/wechat-article-publisher",
     "skills/skill-runtime-sync"

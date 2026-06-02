@@ -4,7 +4,7 @@ This profile is for public sharing of the WeChat article workflow. It contains f
 
 ## Scope
 
-Use this profile for public documentation, onboarding, template generation, and release-package preparation. Do not use it for real Yunfei article drafting.
+Use this profile for public documentation, onboarding, template generation, and release-package preparation. Do not use it for real private author article drafting.
 
 ## Template Roots
 

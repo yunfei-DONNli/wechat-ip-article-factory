@@ -226,35 +226,50 @@ Never claim the article is formally published unless the user provides the final
 
 ## Reference Files
 
-Load these references only when needed:
+Load these references only when needed. Do not bulk-load every file.
 
-### `references/collaboration-writing-flow.md`
+### Core workflow
 
-Use for input diagnosis, collaborative expansion, direction cards, candidate draft creation, and promotion from rough material to publish version.
+- `references/collaboration-writing-flow.md` — input diagnosis, collaborative expansion, direction cards, candidate draft creation, and promotion from rough material to publish version.
+- `references/option-card-evidence.md` — preserve A/B/C direction evidence and decision records before drafting.
+- `references/opening-reading-experience.md` — first-screen reading experience, content index, and opening strategy.
+- `references/creative-runtime.md` — controlled divergence for directions, titles, rewrites, and visual prompts.
 
-### `references/writing-assets-and-story-anchors.md`
+### Author profile and style
 
-Use for writing assets, voice protection, story-anchor decisions, and original-experience preservation.
+- `references/profile-loading.md` — load public-generic or private author profile assets.
+- `references/profile-asset-template-map.md` — map profile assets to required gates.
+- `references/writing-assets-and-story-anchors.md` — writing assets, voice protection, story anchors, and original-experience preservation.
+- `references/style-alignment-gate.md` — style alignment before drafts, rewrites, or feedback recovery.
+- `references/revision-learning-loop.md` — AI draft / user final preservation and revision learning.
+- `references/revision-learning-quality.md` — non-empty revision learning and no-signal handling.
 
-### `references/title-generation.md`
+### Publishing gates
 
-Use for title judgment, 3-5 candidates, recommended title, and title sync requirements.
+- `references/title-generation.md` — title judgment, 3-5 candidates, recommendation, and title sync requirements.
+- `references/truth-and-fact-checking.md` — factual claim classification, verification, and downgrade rules.
+- `references/visual-assets-and-layout.md` — cover/body-image decisions, screenshot preservation, visual assets, and layout baseline.
+- `references/author-visual-system.md` — generic visual system for evidence screenshots, structure diagrams, and metaphor images.
+- `references/wechat-draft-compatibility.md` — WeChat HTML compatibility, draft-box limitations, rebuild rules, and manual publishing fallback.
+- `references/publish-closeout-checklist.md` — precheck, package readiness, draft creation sequence, closeout fields, and final human confirmation checklist.
+- `references/runtime-targets.md` — decide whether the current runtime can create a draft-box entry or should only produce a manual package.
 
-### `references/visual-assets-and-layout.md`
+### Reliability and maintenance
 
-Use for cover/body-image decisions, screenshot preservation, visual assets, and layout baseline.
+- `references/article-execution-reliability.md` — path, package, precheck, image-generation fallback, and handoff reliability rules.
+- `references/article-generation-consistency-checklist.md` — sync related artifacts after article generation or revision.
+- `references/change-impact-checklist.md` — impact scan before modifying this skill, references, templates, scripts, tests, or runtime copies.
+- `references/multica-handoff.md` — optional multi-agent / second-draft handoff protocol.
 
-### `references/wechat-draft-compatibility.md`
+### Evaluations
 
-Use for WeChat HTML compatibility, draft-box limitations, rebuild rules, and manual publishing fallback.
-
-### `references/publish-closeout-checklist.md`
-
-Use for precheck, package readiness, draft creation sequence, closeout fields, and final human confirmation checklist.
-
-### `references/runtime-targets.md`
-
-Use for deciding whether the current runtime can create a draft-box entry or should only produce a manual package.
+- `evals/title-candidates/` — title candidate and single recommendation behavior.
+- `evals/body-images/` — body image landing versus prompt-only failure.
+- `evals/screenshot-evidence/` — screenshot inventory and evidence preservation.
+- `evals/force-new-draft/` — forced new draft after package changes.
+- `evals/opening-reading-experience/` — opening/index clarity.
+- `evals/truth-checking/` — fact checking and claim downgrade behavior.
+- `evals/dual-draft-source/` — dual-source draft provenance.
 
 ## Output Rule
 
