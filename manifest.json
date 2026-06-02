@@ -1,6 +1,6 @@
 {
   "name": "wechat-ip-article-factory",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "status": "public",
   "release_date": "2026-06-02",
   "description": "Public WeChat IP article factory with skills, templates, public-generic profile assets, demo article, onboarding checks, reliability gates, visual/title/fact-check references, and evaluation cases.",
